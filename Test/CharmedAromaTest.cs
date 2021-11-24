@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +17,7 @@ namespace BaigiamasisDarbas.Test
         [Test]
         public void TestPopUpCart()
         {
-            _homePage.NavigateToDefaultPage().ChooseSize().AddToCart().VerifyProductResult("Candy Cane Lane Candle - Ring Collection").VerifySizeResult("Size 6");                   
+            _homePage.NavigateToDefaultPage().ChooseSize().AddToCart().VerifyProductResult("Candy Cane Lane Candle - Ring Collection").VerifySizeResult("Size 6");                  
         }
 
         [Order(2)]
@@ -46,9 +46,10 @@ namespace BaigiamasisDarbas.Test
 
         [Order(5)]
         [Test]
-        public void TestGift()
+        public void TestQuantity()
         {
-            _freeGiftPage.NavigateToDefaultPage().InsertQuantity("3").ClickAddToCartButton().VerifyResult();
+            _quantityPage.NavigateToDefaultPage().InsertQuantity("2").ClickAddToCartButton().ClickCheckOutButton().VerifyResult("2");
+
         }
 
         [Order(6)]
@@ -65,10 +66,6 @@ namespace BaigiamasisDarbas.Test
         {
             _countryPage.NavigateToDefaultPage().ClickCountrySelector().ChooseCountry().ClosePopUp().VerifyResult();
         }
-       
-        
-
-
-
+             
     }
 }
