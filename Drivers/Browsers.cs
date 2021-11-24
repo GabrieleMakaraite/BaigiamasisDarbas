@@ -8,6 +8,7 @@ namespace BaigiamasisDarbas.Drivers
 {
     enum Browsers
     {
-        Chrome
+        Chrome,
+        IncognitoChrome
     }
 }
