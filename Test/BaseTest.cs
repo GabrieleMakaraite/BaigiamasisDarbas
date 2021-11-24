@@ -1,4 +1,4 @@
-﻿using BaigiamasisDarbas.Drivers;
+using BaigiamasisDarbas.Drivers;
 using BaigiamasisDarbas.Page;
 using BaigiamasisDarbas.Tools;
 using NUnit.Framework;
@@ -22,23 +22,25 @@ namespace BaigiamasisDarbas.Test
         public static CartDropDownPage _cartDropDownPage;
         public static CartPage _cartPage;
         public static SearchPage _searchPage;
-        public static FreeGiftPage _freeGiftPage;
         public static CountryPage _countryPage;
         public static HomePage _homePage;
+        public static QuantityPage _quantityPage;
 
         [OneTimeSetUp]
         public static void SetUp()
         {
             driver = CustomDriver.GetChromeDriver();
+            //driver = CustomDriver.GetIncognitoChromeDriver();
 
             _productsSortPage = new ProductsSortPage(driver);
             _jewelryAppraisalPage = new JewelryAppraisalPage(driver);
             _cartDropDownPage = new CartDropDownPage(driver);
             _cartPage = new CartPage(driver);
             _searchPage = new SearchPage(driver);
-            _freeGiftPage = new FreeGiftPage(driver);
             _countryPage = new CountryPage(driver);
             _homePage = new HomePage(driver);
+            _quantityPage = new QuantityPage(driver);
+
         }
         [TearDown]
         public static void TakeScreenshot()
