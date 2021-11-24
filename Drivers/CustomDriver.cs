@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
@@ -15,6 +15,11 @@ namespace BaigiamasisDarbas.Drivers
             return GetDriver(Browsers.Chrome);
         }
 
+        public static IWebDriver GetIncognitoChromeDriver()
+        {
+            return GetDriver(Browsers.IncognitoChrome);
+        }
+
         private static IWebDriver GetDriver(Browsers browserName)
         {
             IWebDriver driver = null;
@@ -24,12 +29,23 @@ namespace BaigiamasisDarbas.Drivers
                 case Browsers.Chrome:
                     driver = new ChromeDriver();
                     break;
+                case Browsers.IncognitoChrome:
+                    driver = GetChromeWithOptions();
+                    break;
             }
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Manage().Window.Maximize();
 
             return driver;
+        }
+
+        private static IWebDriver GetChromeWithOptions()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("incognito");
+            options.AddArgument("start-maximized");
+            return new ChromeDriver(options);
         }
     }
 }
