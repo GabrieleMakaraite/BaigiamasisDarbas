@@ -52,7 +52,7 @@ namespace BaigiamasisDarbas.Test
         [Test]
         public void TestCountryDropDown()
         {
-            _countryPage.NavigateToDefaultPage().ClickCountrySelector().ChooseCountry().ClosePopUp().VerifyResult();
+            _countryPage.NavigateToDefaultPage().ClickCountrySelector().ChooseCountry().VerifyResult();
         }                  
     }
 }
