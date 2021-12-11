@@ -40,7 +40,7 @@ namespace BaigiamasisDarbas.Test
         }
 
         [Order(4)]
-        [TestCase("Penguin Candle - 925 Sterling Silver Penguin Necklace Collection", TestName = "Search Penguin Candle")]
+        [TestCase("Polar Bear Queen Candle - 925 Sterling Silver Polar Bear Necklace Collection", TestName = "Search Bear Candle")]
         [TestCase("Penguin Bath Bomb - Blue Opal Ring Collection", TestName = "Search Penguin Bath Bomb")]
         public void TestSearch(string product)
         {
