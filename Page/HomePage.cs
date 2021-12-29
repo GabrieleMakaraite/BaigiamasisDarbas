@@ -14,13 +14,13 @@ namespace BaigiamasisDarbas.Page
     public class HomePage : BasePage
     {
         private const string PageAddress = "https://eu.charmedaroma.com/";
-        private const string ProductResultText = "Candy Cane Lane Candle - Ring Collection";
+        private const string ProductResultText = "Frosted Coconut Candle - 925 Sterling Silver Ring Collection";
         private const string SizeResultText = "Size 6";
 
         private IWebElement AddToCartButton => Driver.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div[3]/section/div/div/div[2]/div[6]/div[2]/div[2]/div/form/div[2]/input"));
-        private IWebElement ChooseSizeButton => Driver.FindElement(By.CssSelector("#product_form_6622599446622 > a"));
-        private IWebElement SizeButton => Driver.FindElement(By.CssSelector("#product_form_6622599446622 > div.choose-variants > div.swatch.clearfix > div > div:nth-child(2) > label"));
-        private IWebElement ProductResultTextElement => Driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/form/div[1]/div/div/div[2]/div[1]/p/a/b"));
+        private IWebElement ChooseSizeButton => Driver.FindElement(By.CssSelector("#product_form_6622606327902 > a"));
+        private IWebElement SizeButton => Driver.FindElement(By.CssSelector("#product_form_6622606327902 > div.choose-variants > div.swatch.clearfix > div > div:nth-child(2) > label"));
+        private IWebElement ProductResultTextElement => Driver.FindElement(By.CssSelector("#CartContainer > div > form > div.ajaxcart__inner > div > div > div.desktop-7.tablet-4.mobile-3 > div.item_dtl > p > a > b"));
         private IWebElement SizeResultTextElement => Driver.FindElement(By.CssSelector(".ajaxcart__product-meta"));
         private IWebElement CartBox => Driver.FindElement(By.Id("CartDrawer"));
         private IWebElement BathBombsCategory => Driver.FindElement(By.XPath("/html/body/div[2]/div[1]/header/div[2]/div/div/nav/ul/li[4]/a"));
