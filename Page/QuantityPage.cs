@@ -12,7 +12,7 @@ namespace BaigiamasisDarbas.Page
 {
     public class QuantityPage : BasePage
     {
-        private const string PageAddress = "https://eu.charmedaroma.com/collections/all-candles/products/vanilla-snowflake-candle-925-sterling-silver-snowflake-necklace-collection";
+        private const string PageAddress = "https://eu.charmedaroma.com/collections/all-candles/products/hawaiian-oasis-candle-necklace-collection";
 
         private IWebElement InputField => Driver.FindElement(By.CssSelector("#AddToCartForm > div.product-qty.selector-wrapper > input"));
         private IWebElement AddToCartButton => Driver.FindElement(By.Id("AddToCart"));
