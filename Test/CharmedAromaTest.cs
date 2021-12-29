@@ -18,7 +18,7 @@ namespace BaigiamasisDarbas.Test
         public void TestPopUpCart()
         {
             _homePage.NavigateToDefaultPage().ChooseSize().AddToCart()
-                .VerifyProductResult("Candy Cane Lane Candle - Ring Collection")
+                .VerifyProductResult("Frosted Coconut Candle - 925 Sterling Silver Ring Collection")
                 .VerifySizeResult("Size 6");                  
         }
 
