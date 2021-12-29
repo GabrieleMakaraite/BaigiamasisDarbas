@@ -15,13 +15,14 @@ namespace BaigiamasisDarbas.Page
     {
         private const string PageAddress = "https://eu.charmedaroma.com/collections/colored-gemstone-collection";
 
-        private IWebElement ChooseSizeButton => Driver.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[7]/div[1]/div[2]/div[2]/div/form/a"));
-        private IWebElement AdjustableRingButton => Driver.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[7]/div[1]/div[2]/div[2]/div/form/div[1]/div[2]/div/div[2]/label"));
-        private IWebElement AddToCartButton => Driver.FindElement(By.Id("AddToCart"));
+        private IWebElement ChooseSizeButton => Driver.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[7]/div[2]/div[2]/div[2]/div/form/a"));
+        private IWebElement AdjustableRingButton => Driver.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[7]/div[2]/div[2]/div[2]/div/form/div[1]/div[2]/div/div[2]/label"));
+        private IWebElement AddToCartButton => Driver.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[7]/div[2]/div[2]/div[2]/div/form/div[2]/input"));
         private SelectElement DropDown => new SelectElement(Driver.FindElement(By.CssSelector("#CartContainer > div > form > div.ajaxcart__inner > div > div > div.desktop-7.tablet-4.mobile-3 > div.item_dtl > div > select")));
         private IWebElement ResultTextElement => Driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/form/div[1]/div/div/div[2]/div[1]/p/p"));
         private IWebElement CartBox => Driver.FindElement(By.Id("CartDrawer"));
-        private IWebElement CheckOutButton => Driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/form/div[2]/button"));
+        private IWebElement CheckOutButton => Driver.FindElement(By.CssSelector("#CartContainer > div > form > div.ajaxcart__footer.row > button"));
+
         public CartDropDownPage(IWebDriver webdriver) : base(webdriver)
         {           
         }
